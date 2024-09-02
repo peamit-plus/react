@@ -1,0 +1,669 @@
+/* html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: right;
+  font-family: sans-serif;
+  background: #fffafa;
+  padding-top: 20px;
+}
+
+/* .navbar-inverse .navbar-nav>li>a:hover {
+  color: #fff;
+  background-color: transparent;
+} */
+
+.BorderAbout {
+  border: 2px solid #333;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.BorderAbout p {
+  margin: 15px 0;
+}
+
+p {
+  text-align: center;
+}
+
+/* הסתרת הקישור למחשב במכשירים עם מסך קטן */
+@media only screen and (max-width: 768px) {
+  .desktop-link {
+    display: none;
+  }
+}
+
+/* הסתרת הקישור לפלאפון במכשירים עם מסך גדול */
+@media only screen and (min-width: 769px) {
+  .mobile-link {
+    display: none;
+  }
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 0px;
+  display: none;
+  padding: 3px 6px;
+  font-size: 16px;
+  color: #fffafa;
+  background: #337ab7;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  padding: 20px;
+}
+
+.rotating-image {
+  width: 200px;
+  /* או כל רוחב אחר שאתה רוצה */
+  position: fixed;
+  bottom: 0;
+  animation: spin 10s infinite linear;
+  transform-origin: center;
+  mix-blend-mode: multiply;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.bottom-center {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.txt-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #0eddec #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 17px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #0eddec;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+
+p {
+  text-align: center;
+  align-items: center;
+}
+
+.product-image {
+  width: 100%;
+  height: 270px;
+}
+
+.product-caption {
+  height: 75px;
+}
+
+.custom-video {
+  width: 400px;
+  height: auto;
+  border: 2px solid #333;
+  border-radius: 10px;
+}
+
+#salebutton {
+  position: fixed;
+  bottom: 40px;
+  left: 5px;
+  width: 27.94px;
+  /* אפשר להתאים לגודל שאתה רוצה */
+  height: 27.94px;
+  /* אפשר להתאים לגודל שאתה רוצה */
+  border-radius: 50%;
+  background-color: #337ab7;
+  /* צבע רקע */
+  color: #fff;
+  /* צבע טקסט */
+  font-size: 20px;
+  text-align: center;
+  padding: 3px 2px 3px 1px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 769px) {
+
+  #salebutton {
+    position: fixed;
+    bottom: 100px;
+    left: 5px;
+    width: 35px;
+    /* אפשר להתאים לגודל שאתה רוצה */
+    height: 35px;
+    /* אפשר להתאים לגודל שאתה רוצה */
+    border-radius: 50%;
+    background-color: #337ab7;
+    /* צבע רקע */
+    color: #fff;
+    /* צבע טקסט */
+    font-size: 20px;
+    text-align: center;
+    padding: 3px 2px 3px 1px;
+    cursor: pointer;
+  }
+
+}
+
+.img-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*to comuter*/
+@media only screen and (max-width: 769px) {
+
+  #salebutton {
+    position: fixed;
+    bottom: 70px;
+    left: 2px;
+    width: 40px;
+    /* אפשר להתאים לגודל שאתה רוצה */
+    height: 40px;
+    /* אפשר להתאים לגודל שאתה רוצה */
+    border-radius: 50%;
+    background-color: #337ab7;
+    /* צבע רקע */
+    color: #fff;
+    /* צבע טקסט */
+    font-size: 20px;
+    text-align: center;
+    padding: 6px 2px 3px 1px;
+    cursor: pointer;
+  }
+}
+
+#demotext {
+  color: #444444;
+  text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+}
+
+
+.footer {
+  margin-top: 100px;
+  background-color: #333;
+  padding: 20px 0;
+  height: auto;
+  border-top: solid 4px #40c5f2;
+}
+
+.footer h3 {
+  color: #ece755;
+  margin-top: 0;
+}
+
+.footer a {
+  color: #40c5f2;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ece755;
+  content: "-";
+}
+
+.footer a:hover::before {
+  color: #40c5f2;
+  content: "-";
+}
+
+.footer p {
+  color: #ffffff;
+}
+
+hr {
+  border: 1px solid #337ab7;
+  width: 80%;
+}
+
+.carsor {
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  max-width: 100%;
+  background-color: #444444;
+}
+
+.main>.container-fluid {
+  min-height: 200px;
+  background-color: #444444;
+  color: #EEEEEE;
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#addToCartBtn:hover .glyphicon {
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(360deg);
+}
+
+.lds-ring-parent {
+  text-align: center;
+}
+
+.lds-ring,
+.lds-ring div {
+  box-sizing: border-box;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid currentColor;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: currentColor transparent transparent transparent;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  color: #63b0f3;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.icon-large {
+  font-size: 2.5em;
+}
+
+
+.mt-25 {
+  margin-top: 25px;
+}
+
+.shaow {
+  transition: 1s;
+}
+
+/* .shaow:hover {
+  box-shadow: 0px 20px 0px -10px #FFFFFF, 0px -20px 0px -10px #FFFFFF, 20px 0px 0px -10px #FFFFFF, -20px 0px 0px -10px #FFFFFF, 0px 0px 0px 10px #397dfa, 5px 5px 15px 5px rgba(0, 0, 0, 0); 
+} */
+
+.text-shadow {
+  color: #333333;
+  text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.BorderContainer {
+  border-radius: 73px 73px 73px 73px;
+  -moz-border-radius: 73px 73px 73px 73px;
+  -webkit-border-radius: 73px 73px 73px 73px;
+  border: 0px solid #050505;
+  box-shadow: -1px 6px 36px -6px rgba(3, 86, 97, 1);
+  padding-top: 40px;
+}
+
+.cover_defult {
+  display: block;
+  border-bottom: #337ab7 3px solid;
+}
+
+
+img {
+  object-fit: contain;
+  background-color: #5bebfe44;
+}
+
+.nuvProduct {
+  list-style-type: none;
+  /* להסתיר את סוג הרשימה */
+  padding-left: 0;
+  /* להסיר רווח משמאל של הרשימה */
+}
+
+/* סגנון לכפתור פתיחת התפריט במכשירי נייד */
+#openButton {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+  /* מעל התפריט */
+}
+
+.pd-0 {
+  padding: 0;
+}
+
+.panel-nuv {
+  height: 100%;
+
+}
+
+.panel-body-nuv {
+  min-height: 60%;
+  direction: rtl;
+
+}
+
+.panel-heading {
+  font-weight: bold;
+  text-align: center;
+}
+
+.panel-footer {
+  position: sticky;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+}
+
+.card img {
+  width: 100px;
+  /* רוחב התמונה */
+  height: 100px;
+  /* גובה מתאים */
+  object-fit: contain;
+  background-color: #5bebfe44;
+  margin-left: 30px;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.card-content h3 {
+  margin: 0;
+}
+
+.card-content p {
+  margin: 5px 0;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #337ab7;
+}
+
+.RowSearch {
+  margin: 10px 15px;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.rtl .col-md-3 {
+  float: right;
+}
+
+.img-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #f8f9fa;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dee2e6;
+  z-index: 1000;
+}
+
+#sidebar.active {
+  left: 0;
+}
+
+#content {
+  transition: all 0.3s;
+}
+
+#content.active {
+  margin-left: 250px;
+}
+
+.sidebar-header {
+  padding: 15px;
+  background-color: #e9ecef;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.sidebar-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.fixed-buttons {
+  padding: 15px;
+  background-color: #e9ecef;
+  border-top: 1px solid #dee2e6;
+}
+
+.fixed-buttons .btn {
+  margin-bottom: 10px;
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  /* padding: 0px 0px 0px 10px; */
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+.product-info {
+  flex-grow: 1;
+  text-align: right;
+  padding: 10px;
+}
+
+.delete-product {
+  left: 3px;
+  height: 100%;
+  border-right: 1px red solid;
+  color: red;
+}
+
+.delete-product:hover {
+  background-color: red;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    left: -100%;
+    width: 100%;
+  }
+
+  #sidebar.active {
+    left: 0;
+  }
+
+  #content.active {
+    margin-left: 0;
+  }
+}
+
+/* .deleteProductInEnd{
+  border: 1px solid red;
+  border-radius: 10px;
+  padding:  10px 20px 10px 20px;
+  background-color: #fffcfc;
+  color: red;
+}
+.deleteProductInEnd:hover{
+  color: #fffafa;
+  background-color:red;
+
+} */
+nuv>.container-fluid>.navbar-collapse>ul>li>active {
+  background-color: #337ab7;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+/* footer>.container {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width:768px) {
+
+  .container {
+    flex-direction: column;
+  }
+
+  .box-1 {
+    display: flex;
+    
+    justify-content: center;
+   
+    flex-direction: column;
+    order: 1;
+  }
+
+  .box-2 {
+    display: flex;
+    
+    justify-content: center;
+   
+    flex-direction: column;
+    order: 2;
+  }
+
+  .box-3 {
+    display: flex;
+    
+    justify-content: center;
+   
+    flex-direction: column;
+    order: 3;
+  }
+
+  .box-4 {
+    display: flex;
+    
+    justify-content: center;
+   
+    flex-direction: column;
+    order: 4;
+  }
+
+} */ 
